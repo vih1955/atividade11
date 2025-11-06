@@ -1,34 +1,60 @@
-<!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>API Disney</title>
     <style>
-        body{
+        body {
+            font-family: Arial, sans-serif;
             align-items: center;
             text-align: center;
+            padding: 20px;
         }
-
+        #personagem-container {
+            margin-top: 20px;
+            border: 1px solid #ccc;
+            padding: 15px;
+            border-radius: 8px;
+            display: inline-block;
+        }
+        #imagem-personagem {
+            max-width: 200px;
+            height: auto;
+            border-radius: 4px;
+            margin-bottom: 10px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #007bff; 
+            color: white;
+            border: none;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
     </style>
-
 </head>
 <body>
 
-<h1> Personagem da Disney</h1>
-<div id="personagem">
-    <p>Aqui vai aparecer o Personagem</p>
-</div>
-<div id="nome">
-    <p> Aqui vai aparecer o nome do personagem:</p>
-</div>
-<div id="Aleatório"></div>
-<button onclick ="chamar()"></button>
-    <button id="meuBotao">Personagem Aleatório</button>
-     
-</div>
-<script src="appp.js"></script>
+    <h1>Personagem da Disney</h1>
+    
+    <button id="meuBotao" onclick="chamarPersonagemAleatorio()">Personagem Aleatório</button>
+    
+    <div id="personagem-container">
+        <div id="imagem">
+            <img id="imagem-personagem" src="" alt="Imagem do Personagem" style="display: none;">
+        </div>
+        
+        <div id="nome-container">
+            <p id="nome-personagem">Clique no botão para ver um personagem!</p>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
 
 </body>
 </html>
-
